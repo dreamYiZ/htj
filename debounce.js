@@ -1,15 +1,14 @@
-function debounce(callFn, timeout){
-  let t = null;
-  return function execute(){
-    let context = this;
-    let args = arguments;
-    if(t){
+function debounce(callFn, timeout) {
+  var t = null;
+  return function execute() {
+    var context = this;
+    var args = arguments;
+    if (t) {
       clearTimeout(t);
-    }else{
-      
+    } else {
     }
-    t = setTimeout(function(){
-      callFn.apply(context, args)
-    }, timeout)
-  }
+    t = setTimeout(function () {
+      callFn.apply(context, args);
+    }, timeout);
+  };
 }
